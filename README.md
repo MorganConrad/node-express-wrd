@@ -5,6 +5,7 @@ Node Express Example Project for Weather Redirection
 
 There is a supporting [Google Docs presentation] (https://docs.google.com/presentation/d/1_3WsyM1wtgt6rTFCwVLnEyzzRfznkDwxLKHWE54cZK0/edit?usp=sharing)
 
+Also, see my [Blog Entry] (http://flyingspaniel.blogspot.com/2014/01/yet-another-example-demo-nodejs-express.html)
 
 ###Usage
 
