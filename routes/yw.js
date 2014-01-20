@@ -38,7 +38,7 @@ function getPaths(location, appid, callback) {
                     });
                 }
 
-                pathCache[location] = paths;
+                pathCache[location] = paths;  // save in cache
                 callback(error, paths);
             }
         });
@@ -46,23 +46,17 @@ function getPaths(location, appid, callback) {
 }
 
 
-function sendError(res, statusCode, message) {
-   res.statusCode = statusCode;
-   res.send(message || 'oops');
-}
-
-
 function ywRedirect(req, res) {
     var location = req.params.location;
 
     if (!location)
-        sendError(res, 404, 'Please provide a location');
+        res.status(404).send('Please provide a location');
     else {
         getPaths(location, null, function(error, paths) {
             if (error)
-                sendError(res, 500, error);
+                res.status(500).send(error);
             else if (paths.length === 0)
-                sendError(res, 404, 'Cannot find location: ' + location);
+                res.status(404).send('Cannot find location: ' + location);
             else
                 res.redirect(302, 'http://weather.yahoo.com/' + paths[0]);
         });
