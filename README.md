@@ -7,7 +7,7 @@ There is a supporting [Google Docs presentation] (https://docs.google.com/presen
 
 Also, see my [Blog Entry] (http://flyingspaniel.blogspot.com/2014/01/yet-another-example-demo-nodejs-express.html)
 
-###Usage
+### Usage
 
  1. set an environment variable `YAHOO_APPID=your_68_char_appid`
  2. `>node app.js`
